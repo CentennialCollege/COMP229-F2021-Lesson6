@@ -1,12 +1,16 @@
 {
-  "name": "comp229-f2021-lesson4",
-  "version": "0.0.1",
-  "description": "Demo Project for COMP229 Lesson 4",
+  "name": "comp229-f2021-lesson5",
+  "version": "0.0.2",
+  "description": "Demo Project for COMP229 Lesson 5",
   "author": "Tom Tsiliopoulos",
   "main": "server.js",
   "license": "MIT",
   "scripts": {
     "start": "node server.js"
+  },
+  "engines": {
+    "node": "^14.18.0",
+    "npm": "^6.0.0"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
