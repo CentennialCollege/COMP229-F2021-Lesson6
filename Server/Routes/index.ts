@@ -2,62 +2,29 @@ import express from 'express';
 const router = express.Router();
 export default router;
 
-// get a reference to the Game Model Class
-import Game from '../Models/game';
+// instantiate an object of type index controller
+import { DisplayAboutPage, DisplayContactPage, DisplayGamesListPage, DisplayHomePage, DisplayProjectsPage, DisplayServicesPage } from '../Controllers/index';
 
 /* GET home page. */
-router.get('/', function(req, res, next) 
-{
-  res.render('index', { title: 'Home', page: 'home'  });
-});
+router.get('/', DisplayHomePage);
 
 /* GET home page. */
-router.get('/home', function(req, res, next) 
-{
-  res.render('index', { title: 'Home', page: 'home' });
-});
+router.get('/home', DisplayHomePage);
 
 /* GET about page. */
-router.get('/about', function(req, res, next) 
-{
-  res.render('index', { title: 'About Us', page: 'about'  });
-});
+router.get('/about', DisplayAboutPage);
 
 /* GET projects page. */
-router.get('/projects', function(req, res, next) 
-{
-  res.render('index', { title: 'Our Projects', page: 'projects'  });
-});
+router.get('/projects', DisplayProjectsPage);
 
 /* GET services page. */
-router.get('/services', function(req, res, next) 
-{
-  res.render('index', { title: 'Our Services', page: 'services'  });
-});
+router.get('/services', DisplayServicesPage);
 
 /* GET contact page. */
-router.get('/contact', function(req, res, next) 
-{
-  res.render('index', { title: 'Contact Us', page: 'contact'  });
-});
+router.get('/contact', DisplayContactPage);
 
 /* GET games-list */
-router.get('/games-list', function(req, res, next)
-{
-
-  // db.games.find()
-  Game.find(function(err, gamesCollection)
-  {
-    if(err)
-    {
-      console.error(err);
-      res.end(err);
-    }
-
-    res.render('index', { title: 'Games List', page: 'games-list', games: gamesCollection  });
-
-  });
-});
+router.get('/games-list', DisplayGamesListPage);
 
 
 //module.exports = router;
