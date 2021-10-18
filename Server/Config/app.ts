@@ -1,7 +1,7 @@
 /*
 * Author     : Tom Tsiliopoulos
-* Date       : September 20, 2021
-* Description: Demo Project for COMP229-F2021-Lesson3
+* Date       : October 18, 2021
+* Description: Demo Project for COMP229-F2021-Lesson6
 */
 
 import createError from 'http-errors';
@@ -19,7 +19,7 @@ export default app;
 
 // DB Configuration
 import * as DBConfig from './db';
-mongoose.connect(DBConfig.RemoteURI, {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect((DBConfig.RemoteURI) ? DBConfig.RemoteURI : DBConfig.LocalURI, {useNewUrlParser: true, useUnifiedTopology: true});
 
 const db = mongoose.connection; // alias for the mongoose connection
 db.on("error", function()

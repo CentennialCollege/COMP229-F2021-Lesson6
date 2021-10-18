@@ -1,8 +1,8 @@
 "use strict";
 /*
 * Author     : Tom Tsiliopoulos
-* Date       : September 20, 2021
-* Description: Demo Project for COMP229-F2021-Lesson3
+* Date       : October 18, 2021
+* Description: Demo Project for COMP229-F2021-Lesson6
 */
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
@@ -38,7 +38,7 @@ const app = (0, express_1.default)();
 exports.default = app;
 // DB Configuration
 const DBConfig = __importStar(require("./db"));
-mongoose_1.default.connect(DBConfig.RemoteURI, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose_1.default.connect((DBConfig.RemoteURI) ? DBConfig.RemoteURI : DBConfig.LocalURI, { useNewUrlParser: true, useUnifiedTopology: true });
 const db = mongoose_1.default.connection; // alias for the mongoose connection
 db.on("error", function () {
     console.error("Connection Error");

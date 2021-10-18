@@ -1,7 +1,7 @@
 {
-  "name": "comp229-f2021-lesson5",
+  "name": "comp229-f2021-lesson6",
   "version": "0.0.2",
-  "description": "Demo Project for COMP229 Lesson 5",
+  "description": "Demo Project for COMP229 Lesson 6",
   "author": "Tom Tsiliopoulos",
   "main": "server.js",
   "license": "MIT",
