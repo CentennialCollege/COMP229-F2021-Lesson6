@@ -44,3 +44,13 @@ export function DisplayGamesListPage(req: Request, res: Response, next: NextFunc
 
   });
 }
+
+export function DisplayLoginPage(req: Request, res: Response, next: NextFunction): void
+{
+    res.render('index', { title: 'Login', page: 'login'  });
+}
+
+export function DisplayRegisterPage(req: Request, res: Response, next: NextFunction): void
+{
+    res.render('index', { title: 'Register', page: 'register'  });
+}
